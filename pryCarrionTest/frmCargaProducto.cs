@@ -46,7 +46,7 @@ namespace pryCarrionTest
 
         private void button1_Click(object sender, EventArgs e)
         {
-            panAdicional.Visible = true;
+            panOpciones.Visible = true;
         }
 
         private void lstProductos_SelectedIndexChanged(object sender, EventArgs e)
@@ -57,6 +57,14 @@ namespace pryCarrionTest
             } else
             {
                 btnProductos.Enabled = false;
+            }
+        }
+
+        private void txtCargaProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btnCargaProducto.PerformClick();
             }
         }
     }

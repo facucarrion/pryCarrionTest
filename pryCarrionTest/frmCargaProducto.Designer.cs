@@ -34,7 +34,7 @@
             this.btnCargaProducto = new System.Windows.Forms.Button();
             this.lblListaProductos = new System.Windows.Forms.Label();
             this.lstProductos = new System.Windows.Forms.ComboBox();
-            this.panAdicional = new System.Windows.Forms.Panel();
+            this.panOpciones = new System.Windows.Forms.Panel();
             this.btnProductos = new System.Windows.Forms.Button();
             this.gbTipo = new System.Windows.Forms.GroupBox();
             this.radRepuesto = new System.Windows.Forms.RadioButton();
@@ -43,8 +43,8 @@
             this.chkInstalacion = new System.Windows.Forms.CheckBox();
             this.chkEnvio = new System.Windows.Forms.CheckBox();
             this.chkGarantia = new System.Windows.Forms.CheckBox();
-            this.btnAdicionales = new System.Windows.Forms.Button();
-            this.panAdicional.SuspendLayout();
+            this.btnOpciones = new System.Windows.Forms.Button();
+            this.panOpciones.SuspendLayout();
             this.gbTipo.SuspendLayout();
             this.gbAdicional.SuspendLayout();
             this.SuspendLayout();
@@ -56,6 +56,7 @@
             this.txtCargaProducto.Size = new System.Drawing.Size(190, 20);
             this.txtCargaProducto.TabIndex = 0;
             this.txtCargaProducto.TextChanged += new System.EventHandler(this.txtCargaProducto_TextChanged);
+            this.txtCargaProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCargaProducto_KeyPress);
             // 
             // lblCargaProducto
             // 
@@ -99,16 +100,16 @@
             this.lstProductos.TabIndex = 4;
             this.lstProductos.SelectedIndexChanged += new System.EventHandler(this.lstProductos_SelectedIndexChanged);
             // 
-            // panAdicional
+            // panOpciones
             // 
-            this.panAdicional.Controls.Add(this.btnAdicionales);
-            this.panAdicional.Controls.Add(this.gbAdicional);
-            this.panAdicional.Controls.Add(this.gbTipo);
-            this.panAdicional.Location = new System.Drawing.Point(15, 83);
-            this.panAdicional.Name = "panAdicional";
-            this.panAdicional.Size = new System.Drawing.Size(395, 172);
-            this.panAdicional.TabIndex = 5;
-            this.panAdicional.Visible = false;
+            this.panOpciones.Controls.Add(this.btnOpciones);
+            this.panOpciones.Controls.Add(this.gbAdicional);
+            this.panOpciones.Controls.Add(this.gbTipo);
+            this.panOpciones.Location = new System.Drawing.Point(15, 83);
+            this.panOpciones.Name = "panOpciones";
+            this.panOpciones.Size = new System.Drawing.Size(395, 172);
+            this.panOpciones.TabIndex = 5;
+            this.panOpciones.Visible = false;
             // 
             // btnProductos
             // 
@@ -198,16 +199,16 @@
             this.chkGarantia.Text = "Extensión de Garantía";
             this.chkGarantia.UseVisualStyleBackColor = true;
             // 
-            // btnAdicionales
+            // btnOpciones
             // 
-            this.btnAdicionales.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnAdicionales.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAdicionales.Location = new System.Drawing.Point(295, 143);
-            this.btnAdicionales.Name = "btnAdicionales";
-            this.btnAdicionales.Size = new System.Drawing.Size(97, 23);
-            this.btnAdicionales.TabIndex = 2;
-            this.btnAdicionales.Text = "Siguiente";
-            this.btnAdicionales.UseVisualStyleBackColor = false;
+            this.btnOpciones.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnOpciones.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnOpciones.Location = new System.Drawing.Point(295, 143);
+            this.btnOpciones.Name = "btnOpciones";
+            this.btnOpciones.Size = new System.Drawing.Size(97, 23);
+            this.btnOpciones.TabIndex = 2;
+            this.btnOpciones.Text = "Siguiente";
+            this.btnOpciones.UseVisualStyleBackColor = false;
             // 
             // frmCargaProducto
             // 
@@ -215,7 +216,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(422, 268);
             this.Controls.Add(this.btnProductos);
-            this.Controls.Add(this.panAdicional);
+            this.Controls.Add(this.panOpciones);
             this.Controls.Add(this.lstProductos);
             this.Controls.Add(this.lblListaProductos);
             this.Controls.Add(this.btnCargaProducto);
@@ -225,7 +226,7 @@
             this.Name = "frmCargaProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cargar Producto";
-            this.panAdicional.ResumeLayout(false);
+            this.panOpciones.ResumeLayout(false);
             this.gbTipo.ResumeLayout(false);
             this.gbTipo.PerformLayout();
             this.gbAdicional.ResumeLayout(false);
@@ -242,11 +243,11 @@
         private System.Windows.Forms.Button btnCargaProducto;
         private System.Windows.Forms.Label lblListaProductos;
         private System.Windows.Forms.ComboBox lstProductos;
-        private System.Windows.Forms.Panel panAdicional;
+        private System.Windows.Forms.Panel panOpciones;
         private System.Windows.Forms.GroupBox gbTipo;
         private System.Windows.Forms.RadioButton radRepuesto;
         private System.Windows.Forms.Button btnProductos;
-        private System.Windows.Forms.Button btnAdicionales;
+        private System.Windows.Forms.Button btnOpciones;
         private System.Windows.Forms.GroupBox gbAdicional;
         private System.Windows.Forms.CheckBox chkGarantia;
         private System.Windows.Forms.CheckBox chkEnvio;
